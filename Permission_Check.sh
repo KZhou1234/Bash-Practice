@@ -9,10 +9,12 @@ ls -l "$file_path"
 if [[ -r $file_path ]] 
 then
   echo "The file is readable"
-elif [[ -w $file_path ]]
+fi
+if [[ -w $file_path ]]
 then
   echo "The file is writable"
-elif [[ -x $file_path ]]
+fi
+if [[ -x $file_path ]]
 then
   echo "The file is executable"
 
